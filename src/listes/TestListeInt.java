@@ -24,9 +24,13 @@ public class TestListeInt {
 		for (Object object : maList) {
 			System.out.print("mes elements : " + object+" ");
 		}
+		
+		
 		int max = (int) Collections.max(maList);
+		
 		System.out.println("");
 		System.out.println("le plus grand chiffre est de " + max);
+		
 		int min =  (int) Collections.min(maList);
 	
 		maList.remove(	maList.indexOf(min));
@@ -35,7 +39,7 @@ public class TestListeInt {
 		for ( Object object : maList) {
 			int i = (int) object;	
 			if( i<0) {
-				object = (int) Math.abs(i);
+				maList.set(maList.indexOf(object), (int) Math.abs(i));
 			}
 		}
 		System.out.println("");
