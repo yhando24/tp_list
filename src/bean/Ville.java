@@ -30,6 +30,8 @@ public class Ville {
 	public void setNbHabitant(int nbHabitant) {
 		this.nbHabitant = nbHabitant;
 	}
+
+
 	
 	
 	

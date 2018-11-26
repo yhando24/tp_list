@@ -1,6 +1,6 @@
 package bean;
 
-public class Pays {
+public class Pays implements Comparable<Pays> {
 	
 	private String nom;
 	private long nbHabitant;
@@ -38,10 +38,26 @@ public class Pays {
 	public String toString() {
 		return "Pays: " + nom + ", nombre Habitant = " + nbHabitant + ", PIB Par Habitant = " + PIBParHab + ", Pib total " + nbHabitant*PIBParHab;
 	}
+
+	@Override
+	public int compareTo(Pays o) {
+		int resultComparePibparHabitant;
+		if(this.PIBParHab>o.getPIBParHab()) {
+			 resultComparePibparHabitant = -1;
+		} else {
+			resultComparePibparHabitant = 1;
+		}
+	
+		return resultComparePibparHabitant;
+	}
 	
 	
-	
-	
+//	Pour tri par nom
+//	@Override
+//	public int compareTo(Pays o) {
+//		int resultCompareName = this.nom.compareTo(o.getNom());
+//		return resultCompareName ;
+//	}
 	
 	
 }

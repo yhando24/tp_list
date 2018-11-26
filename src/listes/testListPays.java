@@ -6,7 +6,7 @@ import java.util.List;
 
 import bean.Ville;
 
-public class testListVille {
+public class testListPays {
 	
 	public static void main(String[] args) {
 		
